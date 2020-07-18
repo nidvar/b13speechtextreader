@@ -1,39 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 *{
     box-sizing:border-box;
 }
-
 body{
     font-family: 'Open Sans', sans-serif;
 }
-
-.xcontainer{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+h1{
+    text-align:center;
+}
+#xtextbox{
+    margin:auto;
+    background-color: #333;
+    padding:10px;
+    width:60%;
+    border-radius:3px;
+}
+#xtextbox select, textarea{
+    width:100%;
+    margin:5px 0 5px 0;
+    border-radius:3px;
+}
+#xtextbox p {
+    color:white;
+    margin:0;
+}
+#toggletext{
+    background-color:lightcoral;
+    border:none;
+    color:white;
+    border-radius:2px;
+    padding:5px 0 5px 0;
+    width:100%;
+    margin:5px 0 5px 0;
+}
+#xtextbox textarea{
+    height:100px;
+}
+#close{
+    float:right;
 }
 
+/* ************************************************************ */
 .xoutput{
     display:flex;
     flex-wrap: wrap;
+    text-align:center;
     justify-content: center;
 }
-
 .individualBox{
-    background-color: lightcoral;
+    background-color:lightcoral;
+    height:235px;
     margin:10px;
-    height:240px;
+    border-radius:3px;
 }
-
-.individualBox img{
-    width:400px;
-    height:200px;
-    object-fit: cover;
-}
-
-.individualBox p {
+.individualBox p{
     color:white;
-    text-align:center;
-    margin:8px;
+    margin:0;
+}
+.individualBox img{
+    height:200px;
+    width:300px;
+    object-fit:cover;
+    margin-bottom:5px;
+    border-radius:3px 3px 0 0;
 }
