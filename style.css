@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.xcontainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.xoutput{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.individualBox{
+    background-color: lightcoral;
+    margin:10px;
+    height:240px;
+}
+
+.individualBox img{
+    width:400px;
+    height:200px;
+    object-fit: cover;
+}
+
+.individualBox p {
+    color:white;
+    text-align:center;
+    margin:8px;
+}
