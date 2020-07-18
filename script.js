@@ -68,3 +68,13 @@ const box_creation = ()=>{
 }
 
 box_creation();
+
+document.getElementById('togglebox').addEventListener('click',()=>{
+  console.log('toggle box')
+  document.getElementById('xtextbox').classList.toggle('showbox')
+})
+
+document.getElementById('close').addEventListener('click',()=>{
+  console.log('toggle box')
+  document.getElementById('xtextbox').classList.toggle('showbox')
+})

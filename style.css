@@ -4,16 +4,33 @@
 }
 body{
     font-family: 'Open Sans', sans-serif;
+    min-height:100vh;
 }
 h1{
     text-align:center;
 }
+#togglebox{
+    background-color:lightcoral;
+    color:white;
+    border:none;
+    border-radius:3px;
+    padding:5px;
+}
+.xcontainer{
+    text-align: center;
+}
 #xtextbox{
-    margin:auto;
+    width:50%;
+    position: absolute;
+    top:20%;
+    left:25%;
     background-color: #333;
     padding:10px;
-    width:60%;
     border-radius:3px;
+    transition: all 0.5s ease-in-out;
+}
+.showbox{
+    transform: translate(0%,-800px);
 }
 #xtextbox select, textarea{
     width:100%;
