@@ -101,7 +101,10 @@ x.then((a)=>{
 });
 
 
-
+document.getElementById('readtext').addEventListener('click',()=>{
+    message.text = document.getElementById('xtextarea').value;
+    speechSynthesis.speak(message)
+})
 
 
 box_creation();

@@ -12,13 +12,6 @@ h1{
 #voices{
     height:24px;
 }
-#togglebox{
-    background-color:lightcoral;
-    color:white;
-    border:none;
-    border-radius:3px;
-    padding:5px;
-}
 .xcontainer{
     text-align: center;
 }
@@ -45,7 +38,7 @@ h1{
     color:white;
     margin:0;
 }
-#toggletext{
+#readtext{
     background-color:lightcoral;
     border:none;
     color:white;
