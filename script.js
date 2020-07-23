@@ -51,6 +51,7 @@ const data = [
 
 const message = new SpeechSynthesisUtterance();
 
+let voice_list = []
 
 const box_creation = ()=>{
     data.forEach(a=>{
@@ -84,7 +85,7 @@ const voices = ()=>{
     let x;
     x = setInterval(()=>{
       if(voices.getVoices().length>1){
-        resolve(voices.getVoices());
+        resolve(voices.getVoices(), voice_list = speechSynthesis.getVoices());
         clearInterval(x)
       }
     },100)
@@ -99,6 +100,20 @@ x.then((a)=>{
     document.getElementById('voices').appendChild(option)
   })
 });
+
+function setVoice(e) {
+  message.voice = voice_list.find((a)=>{
+    if(a.name === e.target.value){
+      console.log(a.name)
+      return true
+    }else{
+      console.log('fail')
+    }
+  });
+}
+
+document.getElementById('voices').addEventListener('change',setVoice)
+
 
 
 document.getElementById('readtext').addEventListener('click',()=>{
