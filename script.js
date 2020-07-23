@@ -49,6 +49,9 @@ const data = [
     }
 ];
 
+const message = new SpeechSynthesisUtterance();
+
+
 const box_creation = ()=>{
     data.forEach(a=>{
         const box = document.createElement('div');
@@ -63,9 +66,43 @@ const box_creation = ()=>{
         box.appendChild(img);
         box.appendChild(p);
 
+        box.addEventListener('click',(e)=>{
+          console.log(e.target.value)
+          message.text = a.text;
+
+          speechSynthesis.speak(message)
+        })
+
         document.querySelector('.xoutput').appendChild(box);
     })
 }
+
+
+const voices = ()=>{
+  return new Promise((resolve, reject)=>{
+    let voices = speechSynthesis
+    let x;
+    x = setInterval(()=>{
+      if(voices.getVoices().length>1){
+        resolve(voices.getVoices());
+        clearInterval(x)
+      }
+    },100)
+  })
+}
+
+const x = voices();
+x.then((a)=>{
+  a.forEach(a=>{
+    const option = document.createElement('option');
+    option.textContent = a.voiceURI;
+    document.getElementById('voices').appendChild(option)
+  })
+});
+
+
+
+
 
 box_creation();
 
